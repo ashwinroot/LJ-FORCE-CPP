@@ -15,7 +15,7 @@ Particle::Particle(int a, int b, int num_particle) {
 
 }
 
-float  Particle::motion_equation() {
+void  Particle::motion_equation() {
     x = x + (ux*dt) + (0.5*force[0]* pow(dt,2));
     ux= ux + force[0] *dt;
 

@@ -20,7 +20,7 @@ public:
         float dt = 0.0005;
 
     Particle(int x,int y,int num_particle);
-    float motion_equation();
+    void motion_equation();
 
 
 
