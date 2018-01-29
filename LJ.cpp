@@ -7,7 +7,7 @@
 
 void LJ::force_calculate(Particle A, Particle B) {
     float potential, force[2]={0};
-    float distance = distance_calculate(A<B100); //thresholding at max
+    float distance = distance_calculate(A,B,100); //thresholding at max
     if(distance)
     {
         float rvector[2] ={0.0};
@@ -36,4 +36,12 @@ float LJ::distance_calculate(Particle A, Particle B,float threshold) {
         return distance;
     }
     return 0;
+}
+
+void LJ::set_force_zero(Particle list[],int number)
+{
+    for(int i=0;i<number;i++)
+    {
+        list[i].set_force_zero();
+    }
 }

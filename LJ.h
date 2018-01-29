@@ -13,6 +13,7 @@ public:
     void force_calculate(Particle A, Particle B);
     float distance_calculate(Particle A, Particle B,float threshold);
 
+    void set_force_zero(Particle *list,int number);
 };
 
 

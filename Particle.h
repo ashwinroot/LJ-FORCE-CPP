@@ -19,11 +19,14 @@ public:
         double force[2];
         float dt = 0.0005;
 
+    Particle();
     Particle(int x,int y,int num_particle);
     void motion_equation();
+    void set_force_zero();
+    void update_force();
 
 
-
+    void printParticle();
 };
 
 

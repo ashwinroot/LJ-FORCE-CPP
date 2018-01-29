@@ -15,6 +15,19 @@ Particle::Particle(int a, int b, int num_particle) {
 
 }
 
+Particle::Particle() {
+
+}
+
+void Particle::set_force_zero() {
+    force[0] = 0;
+    force[1] = 0;
+}
+
+void Particle::update_force() {
+
+}
+
 void  Particle::motion_equation() {
     x = x + (ux*dt) + (0.5*force[0]* pow(dt,2));
     ux= ux + force[0] *dt;
@@ -23,5 +36,13 @@ void  Particle::motion_equation() {
     uy= uy + force[1] *dt;
 
     //TODO: Work on boundary conditions of x (bouncing of the wall)
+
+}
+
+void Particle::printParticle()
+{
+    cout<<"(x,y)"<<x<<y<<endl;
+    cout<<"(ux,uy)"<<ux<<uy<<endl;
+    cout<<"(Force)"<<force[0]<<force[1]<<endl;
 
 }
